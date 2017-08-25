@@ -109,6 +109,7 @@ RCT_EXPORT_METHOD(reverseGeoCodeGPS:(double)lat lng:(double)lng) {
         body[@"errmsg"] = [self getSearchErrorInfo:error];
     }
     body[@"poiList"] = result.poiList;
+    body[@"test"] = @"test";
     [self sendEvent:@"onGetGeoCodeResult" body:body];
     
 }
@@ -146,6 +147,7 @@ RCT_EXPORT_METHOD(reverseGeoCodeGPS:(double)lat lng:(double)lng) {
         body[@"errmsg"] = [self getSearchErrorInfo:error];
     }
     body[@"poiList"] = result.poiList;
+    body[@"test"] = @"test";
     [self sendEvent:@"onGetReverseGeoCodeResult" body:body];
     
     geoCodeSearch.delegate = nil;
