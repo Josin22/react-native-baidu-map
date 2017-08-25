@@ -132,22 +132,29 @@ RCT_EXPORT_METHOD(reverseGeoCodeGPS:(double)lat lng:(double)lng) {
         }
         cityCodeArr = nil;
         offlineMap = nil;
-        
-//        body[@"latitude"] = [NSString stringWithFormat:@"%f", result.location.latitude];
-//        body[@"longitude"] = [NSString stringWithFormat:@"%f", result.location.longitude];
-        body[@"address"] = result.address;
-//        body[@"province"] = result.addressDetail.province;
-//        body[@"city"] = result.addressDetail.city;
-//        body[@"district"] = result.addressDetail.district;
-//        body[@"streetName"] = result.addressDetail.streetName;
-//        body[@"streetNumber"] = result.addressDetail.streetNumber;
     }
     else {
         body[@"errcode"] = [NSString stringWithFormat:@"%d", error];
         body[@"errmsg"] = [self getSearchErrorInfo:error];
     }
-    body[@"poiList"] = result.poiList;
-    body[@"test"] = @"test";
+    NSMutableArray * poiListArr = [NSMutableArray array];
+    for (BMKPoiInfo * info in result.poiList) {
+        NSMutableDictionary * dict = @{}.mutableCopy;
+        dict[@"name"] = info.name;
+        dict[@"uid"] = info.uid;
+        dict[@"address"] = info.address;
+        dict[@"city"] = info.city;
+        dict[@"phone"] = info.phone;
+        dict[@"postcode"] = info.postcode;
+        dict[@"epoitype"] = [NSNumber numberWithInt:info.epoitype];
+        double lat = info.pt.latitude;
+        double lng = info.pt.longitude;
+        dict[@"pt"] = @[@(lat),@(lng)];
+        [poiListArr addObject:dict];
+    }
+    
+    //    BMKPoiInfo
+    body[@"poiList"] = poiListArr;
     [self sendEvent:@"onGetReverseGeoCodeResult" body:body];
     
     geoCodeSearch.delegate = nil;
