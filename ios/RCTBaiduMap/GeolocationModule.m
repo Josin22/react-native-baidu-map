@@ -108,8 +108,7 @@ RCT_EXPORT_METHOD(reverseGeoCodeGPS:(double)lat lng:(double)lng) {
         body[@"errcode"] = [NSString stringWithFormat:@"%d", error];
         body[@"errmsg"] = [self getSearchErrorInfo:error];
     }
-    body[@"poiList"] = result.poiList;
-    body[@"test"] = @"test";
+    
     [self sendEvent:@"onGetGeoCodeResult" body:body];
     
 }
