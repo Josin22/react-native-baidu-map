@@ -170,10 +170,9 @@ public class GeolocationModule extends BaseModule
                 attr.putString("city", info.city);
                 attr.putString("phone",info.phone);
 
-                WritableArray location = Arguments.createArray();
-                location.put(info.location.latitude);
-                location.put(info.location.longitude);
-                attr.putArray("pt",location);
+                double[] locationArr = {info.location.latitude,info.location.longitude}
+                attr.putArray("pt",locationArr);
+
                 list.pushMap(attr);
             }
             params.putArray("poiList", list);
