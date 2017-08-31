@@ -165,10 +165,15 @@ public class GeolocationModule extends BaseModule
             for (PoiInfo info: poiList) {
                 WritableMap attr = Arguments.createMap();
                 attr.putString("name", info.name);
+                attr.putString("uid",info.uid);
                 attr.putString("address", info.address);
                 attr.putString("city", info.city);
-                attr.putDouble("latitude", info.location.latitude);
-                attr.putDouble("longitude", info.location.longitude);
+                attr.putString("phone",info.phone);
+
+                WritableArray location = Arguments.createArray();
+                location.put(info.location.latitude);
+                location.put(info.location.longitude);
+                attr.putArray("pt",location);
                 list.pushMap(attr);
             }
             params.putArray("poiList", list);
