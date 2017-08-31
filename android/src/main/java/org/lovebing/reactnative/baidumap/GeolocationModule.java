@@ -170,7 +170,7 @@ public class GeolocationModule extends BaseModule
                 attr.putString("city", info.city);
                 attr.putString("phone",info.phone);
 
-                double[] locationArr = {info.location.latitude,info.location.longitude}
+                double[] locationArr = {info.location.latitude,info.location.longitude};
                 attr.putArray("pt",locationArr);
 
                 list.pushMap(attr);
