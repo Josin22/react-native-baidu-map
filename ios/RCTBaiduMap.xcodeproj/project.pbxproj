@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5472E3BD1FA1880C00E421F8 /* PoiSearchModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 5472E3BC1FA1880C00E421F8 /* PoiSearchModule.m */; };
 		EF154DCB1D56218D003146DF /* BaiduMapModule.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EF3C22621CC2C3BE0099E9B6 /* BaiduMapModule.h */; };
 		EF154DCC1D562193003146DF /* RCTBaiduMapViewManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EF6660E71D55E68000DB8D08 /* RCTBaiduMapViewManager.h */; };
 		EF3C225A1CC2C30D0099E9B6 /* RCTBaiduMapView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EF3C22591CC2C30D0099E9B6 /* RCTBaiduMapView.h */; };
@@ -33,6 +34,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5472E3BB1FA1880C00E421F8 /* PoiSearchModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PoiSearchModule.h; sourceTree = "<group>"; };
+		5472E3BC1FA1880C00E421F8 /* PoiSearchModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PoiSearchModule.m; sourceTree = "<group>"; };
 		EF3C22561CC2C30D0099E9B6 /* libRCTBaiduMap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTBaiduMap.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF3C22591CC2C30D0099E9B6 /* RCTBaiduMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTBaiduMapView.h; sourceTree = "<group>"; };
 		EF3C225B1CC2C30D0099E9B6 /* RCTBaiduMapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTBaiduMapView.m; sourceTree = "<group>"; };
@@ -76,6 +79,8 @@
 		EF3C22581CC2C30D0099E9B6 /* RCTBaiduMap */ = {
 			isa = PBXGroup;
 			children = (
+				5472E3BB1FA1880C00E421F8 /* PoiSearchModule.h */,
+				5472E3BC1FA1880C00E421F8 /* PoiSearchModule.m */,
 				EF3C22591CC2C30D0099E9B6 /* RCTBaiduMapView.h */,
 				EF3C225B1CC2C30D0099E9B6 /* RCTBaiduMapView.m */,
 				EF3C22621CC2C3BE0099E9B6 /* BaiduMapModule.h */,
@@ -146,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5472E3BD1FA1880C00E421F8 /* PoiSearchModule.m in Sources */,
 				EF4ABB0D1DC378CF008E75C9 /* GeolocationModule.m in Sources */,
 				EF4ABB101DC3793B008E75C9 /* BaseModule.m in Sources */,
 				EF3C22641CC2C3D30099E9B6 /* BaiduMapModule.m in Sources */,
