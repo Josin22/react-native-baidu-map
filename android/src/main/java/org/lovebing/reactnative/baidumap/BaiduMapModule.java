@@ -5,7 +5,7 @@ import com.facebook.react.bridge.ReactApplicationContext;
 /**
  * Created by zachary on 2/9/2016.
  */
-public class BaiduMapModule extends com.zachary.reactnative.baidumap.BaseModule {
+public class BaiduMapModule extends com.lovebing.reactnative.baidumap.BaseModule {
 
     private static final String REACT_CLASS = "BaiduMapModule";
     public BaiduMapModule(ReactApplicationContext reactContext) {
